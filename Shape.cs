@@ -32,10 +32,8 @@ namespace shape
 
         public int CompareTo(Shape? other)
         {
-            //throw new NotImplementedException();
             if (other == null)
                 throw new ArgumentNullException("傳入的形狀為null值");
-            //throw new NotImplementedException();
 
             return this.area.CompareTo(other.area);
 

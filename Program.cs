@@ -1,23 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-using shape;
+﻿using shape;
 
-//Shape myshape = new Shape();
-
-Shape mycircle1 = new Circle(5.4);
-Shape mycircle2 = new Circle(2.5);
+Shape mycircle1 = new Circle(500);
 Shape myTrianble01 = new Triangle(30,10.2);
-Shape myTrianble02 = new Triangle(3.8, 10);
+Shape myTrapeZoidHigh = new TrapeZoid(4.2, 5.2, 100);
+Shape Large = mycircle1;
 
 
-Console.WriteLine("mycircile1:" + mycircle1.area.ToString() + " mycircile2:" + mycircle2.area.ToString());
-Console.WriteLine("三角形01:" + myTrianble01.area.ToString() + " 三角形02 :" + myTrianble02.area.ToString());
-string msg = "";
-if (mycircle1.CompareTo(myTrianble01) == 0)
-    msg = "一樣";
+Console.WriteLine("圓形:" + mycircle1.area.ToString());
+Console.WriteLine("三角形:" + myTrianble01.area.ToString());
+Console.WriteLine("梯形"+myTrapeZoidHigh.area.ToString());
 
-if (mycircle1.CompareTo(myTrianble01) > 0)
-    msg = "1號圓比較大";
+if (myTrianble01.CompareTo(Large)>0)
+    Large=myTrianble01;
 
-if (mycircle1.CompareTo(myTrianble01) < 0)
-    msg = "1號三角形大";
-Console.WriteLine(msg);
+if (myTrapeZoidHigh.CompareTo(Large) > 0)
+    Large=myTrapeZoidHigh;
+
+Console.WriteLine(Large);
